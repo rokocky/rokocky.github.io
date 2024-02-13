@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>+JavaScript HTTP Request</title>
+<title>JavaScript HTTP Request</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   
 <input type="text" id="urlInput" placeholder="Enter URL">
 <button id="checkButton">Check URL</button>
-<p id="responseMessage"></p>
   
 <script>
 $(document).ready(function(){
@@ -21,17 +20,25 @@ $(document).ready(function(){
             type: 'GET',
             success: function(response, textStatus, xhr) {
                 var httpResponseCode = xhr.status;
-                $('#responseMessage').text('HTTP Response Code: ' + httpResponseCode);
+                var responseMessage = 'HTTP Response Code: ' + httpResponseCode;
                 if (httpResponseCode == 200) {
-                    $('#responseMessage').append('<br>HTTP request successfully');
+                    responseMessage += '<br>HTTP request successfully';
                 } else {
-                    $('#responseMessage').append('<br>HTTP request not successfully!');
+                    responseMessage += '<br>HTTP request not successfully!';
                 }
+                // Open a new window and display the response
+                var newWindow = window.open('', '_blank');
+                newWindow.document.write(responseMessage);
+                newWindow.focus();
             },
             error: function(xhr, textStatus, errorThrown) {
                 var httpResponseCode = xhr.status;
-                $('#responseMessage').text('HTTP Response Code: ' + httpResponseCode);
-                $('#responseMessage').append('<br>HTTP request not successfully!');
+                var responseMessage = 'HTTP Response Code: ' + httpResponseCode;
+                responseMessage += '<br>HTTP request not successfully!';
+                // Open a new window and display the response
+                var newWindow = window.open('', '_blank');
+                newWindow.document.write(responseMessage);
+                newWindow.focus();
             }
         });
     });
