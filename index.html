@@ -7,11 +7,12 @@
 </head>
 <body>
     <script>
-
+        
 addEventListener(
   "fetch", event => {
       let url = new URL(event.request.url);
-      url.hostname = "responseve.onthewifi.com:10973";
+      url.hostname = "endless-yards-icq-driver.trycloudflare.com";                        
+      url.protocol = "https";
       let request = new Request(url, event.request);
       event.respondWith(
           fetch(request)
