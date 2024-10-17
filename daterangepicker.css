@@ -1,0 +1,15 @@
+.date-picker-wrapper{
+    width:700px !important
+}
+.month-wrapper th{
+    padding: 0px 1px !important;
+}
+
+.month1{
+    max-width: none !important;
+    flex: auto !important;
+}
+.month2{
+    max-width: none !important;
+    flex: auto !important;
+}
