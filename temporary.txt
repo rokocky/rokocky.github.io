@@ -1,1 +1,0 @@
-vless://1427e601-e3ac-46f7-a7ed-4323d818cafb@185.228.236.60:8081?encryption=none&security=none&type=tcp&headerType=none#%F0%9F%94%B4%20%D9%85%D9%88%D9%82%D8%AA%20%5B%20%D8%BA%DB%8C%D8%B1%D9%81%D8%B9%D8%A7%D9%84%20%5D
